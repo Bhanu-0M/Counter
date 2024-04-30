@@ -44,7 +44,7 @@ const Counter = () => {
 
   const fetchCounter = useCallback(async () => {
     try {
-      const response = await axios.get('https://localhost:5000/api/counter');
+      const response = await axios.get('https://counter-z2dx.onrender.com/api/counter');
       dispatch({ type: 'SET', count: response.data.count });
     } catch (err) {
       console.error(err);
@@ -57,7 +57,7 @@ const Counter = () => {
 
   const incrementCounter = useCallback(async () => {
     try {
-      await axios.post('https://localhost:5000/api/counter/increment');
+      await axios.post('https://counter-z2dx.onrender.com/api/counter/increment');
       dispatch({ type: 'INCREMENT' });
     } catch (err) {
       console.error(err);
@@ -66,7 +66,7 @@ const Counter = () => {
 
   const decrementCounter = useCallback(async () => {
     try {
-      await axios.post('https://localhost:5000/api/counter/decrement');
+      await axios.post('https://counter-z2dx.onrender.com/api/counter/decrement');
       dispatch({ type: 'DECREMENT' });
     } catch (err) {
       console.error(err);
@@ -90,7 +90,7 @@ const My_Counter = () => {
 
   const fetchCounter = useCallback(async () => {
     try {
-      const response = await axios.get('https://localhost:5000/api/my_counter');
+      const response = await axios.get('https://counter-z2dx.onrender.com/api/my_counter');
       console.log(response.data)
       dispatch({ type: 'SET-1', my_count: response.data.my_count });
     } catch (err) {
@@ -104,7 +104,7 @@ const My_Counter = () => {
 
   const incrementCounter = useCallback(async () => {
     try {
-      await axios.post('httpss://localhost:5000/api/counter/my_increment');
+      await axios.post('https://counter-z2dx.onrender.com/api/counter/my_increment');
       dispatch({ type: 'INCREMENT-1' });
     } catch (err) {
       console.error(err);
@@ -113,7 +113,7 @@ const My_Counter = () => {
 
   const decrementCounter = useCallback(async () => {
     try {
-      await axios.post('https://localhost:5000/api/counter/my_decrement');
+      await axios.post('https://counter-z2dx.onrender.com/api/counter/my_decrement');
       dispatch({ type: 'DECREMENT-1' });
     } catch (err) {
       console.error(err);

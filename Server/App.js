@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use(cors({origin: 'https://your-netlify-app-url.com', credentials: true}));
+app.use(cors({origin: true, credentials: true}));
 
 // MongoDB Connection
 mongoose.connect('mongodb+srv://bhanu:bhanu1307@cluster0.0ivvl16.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
